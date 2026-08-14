@@ -1,0 +1,11 @@
+services:
+  photobooth-server:
+    build:
+      context: .
+      target: server
+    ports:
+      - "5000:5000"
+    environment:
+      NODE_ENV: production
+      PORT: 5000
+      CORS_ORIGIN: http://localhost:3000
